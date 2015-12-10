@@ -18,6 +18,7 @@ describe('SongQueueView', function() {
 
   it('creates SongQueueEntryViews for each queued song & renders them', function() {
     sinon.spy(SongQueueEntryView.prototype, 'render');
+    //debugger;
     view = new SongQueueView({collection: fakeSongs});
     view.render();
     expect(SongQueueEntryView.prototype.render).to.have.been.called;
