@@ -18,6 +18,7 @@ var SongQueue = Songs.extend({
   },
 
   removeSong: function(song) {    
+    console.log("where is ended????");
     this.shift();
     //this.trigger("remove");
     if(this.length){

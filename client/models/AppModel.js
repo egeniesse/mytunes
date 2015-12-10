@@ -23,13 +23,14 @@ var AppModel = Backbone.Model.extend({
       this.set("currentSong", song);
     }, this);
 
-    params.library.on("ended", function(song){
-      console.log("??????????");
-      //this.set("currentSong", this.get("songQueue").at(0));
-    }, this);
+    // params.library.on("ended", function(song){
+    //   console.log("??????????");
+    //   //this.set("currentSong", this.get("songQueue").at(0));
+    // }, this);
 
-    // this.get("songQueue").on("dequeue", function(song){
-    //   song.dequeue();
+    // this.get("songQueue").on("ended", function(song){
+    //   //song.dequeue();
+    //   console.log("-------------")
     // }, this);
 
 
