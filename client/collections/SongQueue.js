@@ -1,7 +1,12 @@
 // SongQueue.js - Defines a backbone model class for the song queue.
 var SongQueue = Songs.extend({
 
+
   initialize: function() {
+    this.on('route' , function(){
+      this.playFirst();
+      console.log('WORKED')
+    })
     this.on("add", function(){
       if (this.length===1) {
         this.playFirst();
@@ -13,14 +18,11 @@ var SongQueue = Songs.extend({
   },
 
   playFirst: function() {
-   // console.log("anything?????");
     this.at(0).play();
   },
 
   removeSong: function(song) {    
-    console.log("where is ended????");
     this.shift();
-    //this.trigger("remove");
     if(this.length){
       this.playFirst();
     }
